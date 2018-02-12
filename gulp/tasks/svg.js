@@ -2,7 +2,7 @@
 
 module.exports = function() {
   $.gulp.task("svg", function() {
-    return ($.gulp.src('/src/assets/icons/*.svg')
+    return ($.gulp.src('src/assets/icons/*.svg')
         // минифицируем svg
         .pipe($.p.svgmin({
             js2svg: {

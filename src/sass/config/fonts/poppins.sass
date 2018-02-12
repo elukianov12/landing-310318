@@ -1,0 +1,87 @@
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Poppins-Regular.woff2') format('woff2')
+    font-weight: 400
+    font-style: normal
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Poppins-Black.woff2') format('woff2')
+    font-weight: 800
+    font-style: normal
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Poppins-Blackitalic.woff2') format('woff2')
+    font-weight: 800
+    font-style: italic
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Poppins-Bold.woff2') format('woff2')
+    font-weight: 800
+    font-style: normal
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Poppins-Bolditalic.woff2') format('woff2')
+    font-weight: 800
+    font-style: italic
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Italic.woff2') format('woff2')
+    font-weight: 400
+    font-style: italic
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Light.woff2') format('woff2')
+    font-weight: 300
+    font-style: normal
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Lightitalic.woff2') format('woff2')
+    font-weight: 300
+    font-style: italic
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Medium.woff2') format('woff2')
+    font-weight: 500
+    font-style: normal
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Mediumitalic.woff2') format('woff2')
+    font-weight: 500
+    font-style: italic
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Thin.woff2') format('woff2')
+    font-weight: 200
+    font-style: normal
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/Thinitalic.woff2') format('woff2')
+    font-weight: 200
+    font-style: italic
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/SemiBold.woff2') format('woff2')
+    font-weight: 600
+    font-style: normal
+@font-face 
+    font-family: 'Poppins'
+    src: url('../fonts/Poppins/SemiBoldItalic.woff2') format('woff2')
+    font-weight: 600
+    font-style: italic
+
+=Poppins($weight: regular, $style: normal)
+    font-family: 'Poppins', Helvetica, Arial, sans-serif
+    @if $weight == light
+        font-weight: 300
+    @if $weight == regular
+        font-weight: 400
+    @if $weight == medium
+        font-weight: 500
+    @if $weight == bold
+        font-weight: 700
+    @if $weight == semibold
+        font-weight: 600
+    @if $style == normal
+        font-style: normal
+    @if $style == italic
+        font-style: italic

@@ -26,7 +26,7 @@ $.gulp.task('build',
         "sass", 
         "svg", 
         "img",
-        "fonts",
+        $.gulp.series("ttf2woff2","fonts"),
         "scripts",
         "jsPlugins")
 ));
