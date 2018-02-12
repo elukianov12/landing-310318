@@ -1,0 +1,26 @@
+header.header
+		.container
+			.row.justify-content-between.align-items-center  
+				.col-md-auto
+					.logo
+						img.logo_img(src="/img/logo.png", alt="PAHU Design")
+				.col-md-auto
+					nav.top_nav
+						ul.top_nav__list
+							- var nav = ['home','features','shop','blog','accessories','contact']
+							each item in nav
+								li.top_nav__item
+									a(href=`#${item}`)=item
+				.col-md-auto
+					.top_icons
+						ul.top_icons__list
+							- 
+								var icons = {
+											link	: ['/search','/favorites','/cart'],
+											faIcon: ['fa-search', 'fa-heart-o', 'fa-shopping-cart']
+											}
+							each item, i in icons.link
+								li.top_icons__item
+									a.top_icons__link(href=`${item}`)
+										i.fa(class=`${icons.faIcon[i]}`)
+section.section.section__hero

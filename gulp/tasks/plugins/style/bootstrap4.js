@@ -3,7 +3,7 @@
 module.exports = function() {
   $.gulp.task("bootstrapStyleCopy", function() {
     return $.gulp
-      .src('node_modules/bootstrap/dist/css/bootstrap-grid.min.css')
+      .src('node_modules/bootstrap/dist/css/bootstrap.min.css')
       .pipe(
         $.p.rename({
           extname: ".scss"

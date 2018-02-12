@@ -71,6 +71,8 @@
 
 =Poppins($weight: regular, $style: normal)
     font-family: 'Poppins', Helvetica, Arial, sans-serif
+    @if $weight == thin
+        font-weight: 200
     @if $weight == light
         font-weight: 300
     @if $weight == regular

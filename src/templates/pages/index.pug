@@ -1,14 +1,6 @@
 extends ../main.pug
+block header
+	include ../common/header
 block content
-	header.header
-		.container
-			.row
-				.col-md
-					img.logo(src="/img/logo.png", alt="PAHU Design")
-				.col-md
-					nav.top_nav
-						ul.top_nav__list
-						- var list = ['home','features','shop','blog','accessories','contact']
-						each item in list
-							li.top_nav__item
-								a(href=`#${item}`)=item
+	
+block footer
