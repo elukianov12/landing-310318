@@ -1,4 +1,6 @@
-section.section.chooseUs
+section.section.chooseUs(
+  style="background-image: url(/img/sofa.png)"
+)
   .container.h-100
     .row.justify-content-center
       .col-md-auto
@@ -7,39 +9,48 @@ section.section.chooseUs
     .row.align-items-center.h-100
       - 
         var cols = {
-          left: {
-            first: {
-              header: 'h1',
-              text: 't1',
+          left: [
+            {
+              header: 'modern design',
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, provident?',
+              img: 'design.png',
             },
-            second: {
-              header: 'h2',
-              text: 't2',
+            {
+              header: 'Unique quality',
+              text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo temporibus commodi accusamus repudiandae labore dicta ipsa sed ullam officiis. Sapiente.',
+              img: 'quality.png',
             },
-          },
-          right: {
-            third: {
-              header: 'h3',
-              text: 't3',
+          ],
+          right: [
+            {
+              header: 'honest prices',
+              text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, consectetur.',
+              img: 'prices.png',
             },
-            four: {
-              header: 'h4',
-              text: 't4',
+            {
+              header: 'great support',
+              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique minus sequi voluptatem aspernatur id veniam!',
+              img: 'support.png',
             },
-          }
+          ]
         }
       each col, c  in cols
-        .col-md
+        .col-md.h-50
           each row, r in col
-            .row.no-gutters
+            .row.no-gutters.media
               if c == 'left'
-                .col-md-10
-                  h3
-                  - console.log (col)
-                  p
+                .col-md-8
+                  h3=col[r].header
+                  p=col[r].text
                 .col-md-2
+                  .chooseUs__pic
+                    img(src=`/img/chooseUs/${col[r].img}`, alt="")
+                .col-md-2.hidden-md-down
               if c == 'right'
+                .col-md-2.hidden-md-down
                 .col-md-2
-                .col-md-10
-                  h3
-                  p
+                  .media.chooseUs__pic
+                    img(src=`/img/chooseUs/${col[r].img}`, alt="")
+                .col-md-8
+                  h3=col[r].header
+                  p=col[r].text
