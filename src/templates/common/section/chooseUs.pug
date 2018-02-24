@@ -1,0 +1,45 @@
+section.section.chooseUs
+  .container.h-100
+    .row.justify-content-center
+      .col-md-auto
+        h2 why choose us
+        .divider
+    .row.align-items-center.h-100
+      - 
+        var cols = {
+          left: {
+            first: {
+              header: 'h1',
+              text: 't1',
+            },
+            second: {
+              header: 'h2',
+              text: 't2',
+            },
+          },
+          right: {
+            third: {
+              header: 'h3',
+              text: 't3',
+            },
+            four: {
+              header: 'h4',
+              text: 't4',
+            },
+          }
+        }
+      each col, c  in cols
+        .col-md
+          each row, r in col
+            .row.no-gutters
+              if c == 'left'
+                .col-md-10
+                  h3
+                  - console.log (col)
+                  p
+                .col-md-2
+              if c == 'right'
+                .col-md-2
+                .col-md-10
+                  h3
+                  p

@@ -7,9 +7,13 @@ html(lang="en")
         title Pahu Design 
         link(rel="stylesheet", href="styles/main.css")
     body
-    block header
-    block content
-    block footer
+        .wrapper
+            block header
+                include common/header
+            block content
+
+            block footer
+    
     script(src="https://code.jquery.com/jquery-3.3.1.min.js")
     script.
         window.jQuery || document.write("<script src='scripts/jquery.mins.js'><\/script>")

@@ -17,10 +17,10 @@ header.header
 							- 
 								var icons = {
 											link	: ['/search','/favorites','/cart'],
-											faIcon: ['fa-search', 'fa-heart-o', 'fa-shopping-cart']
+											faIcon: ['fa-search', 'fa-heart-o', 'fa-shopping-cart'],
+											//- active: [false,false,true]
 											}
 							each item, i in icons.link
 								li.top_icons__item
 									a.top_icons__link(href=`${item}`)
 										i.fa(class=`${icons.faIcon[i]}`)
-section.section.section__hero
