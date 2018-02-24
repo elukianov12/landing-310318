@@ -37,20 +37,18 @@ section.section.chooseUs(
       each col, c  in cols
         .col-md.h-50
           each row, r in col
-            .row.no-gutters.media
+            .row.no-gutters
               if c == 'left'
-                .col-md-8
-                  h3=col[r].header
-                  p=col[r].text
-                .col-md-2
-                  .chooseUs__pic
-                    img(src=`/img/chooseUs/${col[r].img}`, alt="")
-                .col-md-2.hidden-md-down
+                .media
+                  .media-body
+                    h3=col[r].header
+                    p=col[r].text
+                  .chooseUs__pic  
+                    img.img-fluid(src=`/img/chooseUs/${col[r].img}`, alt="")
               if c == 'right'
-                .col-md-2.hidden-md-down
-                .col-md-2
-                  .media.chooseUs__pic
-                    img(src=`/img/chooseUs/${col[r].img}`, alt="")
-                .col-md-8
-                  h3=col[r].header
-                  p=col[r].text
+                  .media
+                    .chooseUs__pic  
+                      img.img-fluid(src=`/img/chooseUs/${col[r].img}`, alt="")
+                    .media-body
+                      h3=col[r].header
+                      p=col[r].text
