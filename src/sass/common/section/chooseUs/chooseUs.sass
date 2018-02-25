@@ -1,29 +1,38 @@
 .chooseUs
   color: $white
-  padding: rem(30px)
-  height: 80vh
-  // +bg('sofa.png')
-  background-size: 20%
-  background-position: 50% 70%
-  background-repeat: no-repeat
-  +md
-    background-size: 50%
-    height: 100vh
+  padding: rem(30px) 0
+  &__container
+    padding: 0;
   h2
     font-size: rem(40px)
     color: $gold
     text-transform: uppercase
     text-align: center
     font-weight: 600
+    letter-spacing: rem(7px)
   h3
     text-transform: uppercase
     color: $gold
-    font-size: rem(20px)
+    font-size: rem(19px)
+    margin-bottom: rem(20px)
+    letter-spacing: rem(3px)
   p
     font-size: rem(14px)
   &__pic
-    width: rem(80px)
-    height: rem(80px)
+    // width: rem(80px)
+    // height: rem(80px)
     display: flex
     justify-content: center
-    align-items: center
+    align-items: start
+  &__data
+    &-left
+      text-align: right
+      margin-right: rem(35px)
+    &-right
+      margin-left: rem(35px)
+  &__divider
+    margin-bottom: rem(120px)
+  &__row
+    margin-bottom: rem(65px)
+      
+    

@@ -1,12 +1,10 @@
-section.section.chooseUs(
-  style="background-image: url(/img/sofa.png)"
-)
-  .container.h-100
+section.section.chooseUs
+  .container.h-100.chooseUs__container
     .row.justify-content-center
       .col-md-auto
         h2 why choose us
-        .divider
-    .row.align-items-center.h-100.no-gutters
+        .divider.chooseUs__divider
+    .row.align-items-start.h-100.no-gutters
       - 
         var cols = {
           left: [
@@ -20,6 +18,11 @@ section.section.chooseUs(
               text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo temporibus commodi accusamus repudiandae labore dicta ipsa sed ullam officiis. Sapiente.',
               img: 'quality.png',
             },
+          ],
+          middle: [
+            {
+              img: 'sofa.png',
+            }
           ],
           right: [
             {
@@ -37,18 +40,21 @@ section.section.chooseUs(
       each col, c  in cols
         .col-md.h-50
           each row, r in col
-            .row.no-gutters
+            .row.no-gutters.chooseUs__row
               if c == 'left'
-                .media.mr-5
-                  .media-body.mb-3
+                .col-md-9
+                  .chooseUs__data.chooseUs__data-left
                     h3=col[r].header
                     p=col[r].text
-                  .chooseUs__pic  
-                    img.img-fluid(src=`/img/chooseUs/${col[r].img}`, alt="")
+                .col-md-3.chooseUs__pic
+                  img.img(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].header}`)
+              if c == 'middle'
+                .col-md-12.chooseUs__pic-middle
+                  img.img(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].img}`)
               if c == 'right'
-                  .media.ml-5
-                    .chooseUs__pic  
-                      img.img-fluid(src=`/img/chooseUs/${col[r].img}`, alt="")
-                    .media-body.mb-3
-                      h3=col[r].header
-                      p=col[r].text
+                .col-md-3.chooseUs__pic
+                  img.img(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].header}`)
+                .col-md-9
+                  .chooseUs__data.chooseUs__data-right
+                    h3=col[r].header
+                    p=col[r].text
