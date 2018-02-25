@@ -6,7 +6,7 @@ section.section.chooseUs(
       .col-md-auto
         h2 why choose us
         .divider
-    .row.align-items-center.h-100
+    .row.align-items-center.h-100.no-gutters
       - 
         var cols = {
           left: [
@@ -39,16 +39,16 @@ section.section.chooseUs(
           each row, r in col
             .row.no-gutters
               if c == 'left'
-                .media
-                  .media-body
+                .media.mr-5
+                  .media-body.mb-3
                     h3=col[r].header
                     p=col[r].text
                   .chooseUs__pic  
                     img.img-fluid(src=`/img/chooseUs/${col[r].img}`, alt="")
               if c == 'right'
-                  .media
+                  .media.ml-5
                     .chooseUs__pic  
                       img.img-fluid(src=`/img/chooseUs/${col[r].img}`, alt="")
-                    .media-body
+                    .media-body.mb-3
                       h3=col[r].header
                       p=col[r].text
