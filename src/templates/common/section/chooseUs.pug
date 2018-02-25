@@ -1,3 +1,5 @@
+-// Попробовать загнать повторяющийся код в миксин
+
 section.section.chooseUs
   .container.h-100.chooseUs__container
     .row.justify-content-center
@@ -5,56 +7,48 @@ section.section.chooseUs
         h2 why choose us
         .divider.chooseUs__divider
     .row.align-items-start.h-100.no-gutters
-      - 
-        var cols = {
-          left: [
-            {
-              header: 'modern design',
-              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, provident?',
-              img: 'design.png',
-            },
-            {
-              header: 'Unique quality',
-              text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo temporibus commodi accusamus repudiandae labore dicta ipsa sed ullam officiis. Sapiente.',
-              img: 'quality.png',
-            },
-          ],
-          middle: [
-            {
-              img: 'sofa.png',
-            }
-          ],
-          right: [
-            {
-              header: 'honest prices',
-              text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, consectetur.',
-              img: 'prices.png',
-            },
-            {
-              header: 'great support',
-              text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique minus sequi voluptatem aspernatur id veniam!',
-              img: 'support.png',
-            },
-          ]
-        }
       each col, c  in cols
-        .col-md.h-50
-          each row, r in col
-            .row.no-gutters.chooseUs__row
-              if c == 'left'
-                .col-md-9
-                  .chooseUs__data.chooseUs__data-left
-                    h3=col[r].header
-                    p=col[r].text
-                .col-md-3.chooseUs__pic
-                  img.img(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].header}`)
-              if c == 'middle'
-                .col-md-12.chooseUs__pic-middle
-                  img.img(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].img}`)
-              if c == 'right'
-                .col-md-3.chooseUs__pic
-                  img.img(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].header}`)
-                .col-md-9
-                  .chooseUs__data.chooseUs__data-right
-                    h3=col[r].header
-                    p=col[r].text
+        if col != cols.middle
+          .col-md.h-50
+            each row, r in col
+              .row.no-gutters.chooseUs__row
+                if c == 'left'
+                  .col-md-9
+                    .chooseUs__data.chooseUs__data-left
+                      h3=col[r].header
+                      p=col[r].text
+                  .col-md-3.chooseUs__pic
+                    img.img.img-fluid(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].header}`)
+                if c == 'middle'
+                  .col-md-12.chooseUs__pic-middle
+                    img.img.img-fluid(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].img}`)
+                if c == 'right'
+                  .col-md-3.chooseUs__pic
+                    img.img.img-fluid(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].header}`)
+                  .col-md-9
+                    .chooseUs__data.chooseUs__data-right
+                      h3=col[r].header
+                      p=col[r].text
+        else
+          .col-md.h-50.align-self-center
+            each row, r in col
+              .row.no-gutters.chooseUs__row
+                if c == 'left'
+                  .col-md-9
+                    .chooseUs__data.chooseUs__data-left
+                      h3=col[r].header
+                      p=col[r].text
+                  .col-md-3.chooseUs__pic
+                    img.img(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].header}`)
+                if c == 'middle'
+                  .col-md-12.chooseUs__pic-middle
+                    img.img(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].img}`)
+                if c == 'right'
+                  .col-md-3.chooseUs__pic
+                    img.img(src=`/img/chooseUs/${col[r].img}`, alt=`${col[r].header}`)
+                  .col-md-9
+                    .chooseUs__data.chooseUs__data-right
+                      h3=col[r].header
+                      p=col[r].text
+            
+      

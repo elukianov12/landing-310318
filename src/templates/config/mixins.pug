@@ -1,0 +1,21 @@
+mixin banner(name)
+  if name == 'chair'
+    .banner__bg(class=`banner__${name}` style=`background-image:url(${banners[0].img})`, alt="")
+      h3= banners[0].data
+      a(href=`${banners[0].link}`) view detail
+        i.fa.fa-long-arrow-right.banner__arrow
+  if name == 'sofa'
+    .banner__bg(class=`banner__${name}` style=`background-image:url(${banners[1].img})`, alt="")
+      h3= banners[1].data
+      a(href=`${banners[1].link}`) view detail
+        i.fa.fa-long-arrow-right.banner__arrow
+  if name == 'ceramics'
+    .banner__bg(class=`banner__${name}` style=`background-image:url(${banners[2].img})`, alt="")
+      h3= banners[2].data
+      a(href=`${banners[2].link}`) view detail
+        i.fa.fa-long-arrow-right.banner__arrow
+  if name == 'plane'
+    .banner__bg(class=`banner__${name}` style=`background-image:url(${banners[3].img})`, alt="")
+  if name == 'apples'
+    .banner__bg(class=`banner__${name}` style=`background-image:url(${banners[4].img})`, alt="")
+  

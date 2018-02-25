@@ -8,6 +8,8 @@ html(lang="en")
         link(rel="stylesheet", href="styles/main.css")
     body
         .wrapper
+            include config/vars
+            include config/mixins
             block header
                 include common/header
             block content
@@ -20,4 +22,3 @@ html(lang="en")
     script(src="scripts/tether.min.js")
     script(src="scripts/bootstrap.min.js")
     script(src="scripts/bundle.js")
-    include config/mixins
