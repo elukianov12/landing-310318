@@ -1,5 +1,4 @@
 #user ignore list
-build/
 
 # Numerous always-ignore extensions
 *.rar
