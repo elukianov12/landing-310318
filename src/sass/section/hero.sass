@@ -1,0 +1,32 @@
+.hero
+  padding: rem(50px) rem(85px)
+  display: flex
+  flex-flow: column
+  +md
+    padding: rem(50px) rem(10px)
+  &__button
+    font-size: rem(25px)
+  &__row
+    flex: 1
+  &__container
+    background-image: url('../img/hero.png')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+  &__header
+    text-align: center
+    text-transform: uppercase
+    font-size: rem(65px)
+    font-weight: 800
+    color: $white
+    text-shadow: 2px 2px 35px rgba(251, 224, 94, 1), 1px 1px 3px rgba(235, 168, 63, 1);
+    margin-bottom: rem(30px)
+    +md
+      font-size: rem(40px)
+  &__description
+    text-align: center
+    color: $white;
+    max-width: rem(510px)
+    margin-bottom: rem(30px)
+    +md
+      max-width: initial

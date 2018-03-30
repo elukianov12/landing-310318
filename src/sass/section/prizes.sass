@@ -1,0 +1,53 @@
+.prizes
+  background-image: url('../img/waves.png')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position-y: rem(300px)
+  &__text
+      & li
+        display: flex
+        &:before
+          margin-right: rem(10px)
+          content: '—'
+  &__item
+    margin-bottom: rem(110px)
+    &:last-child
+        margin-bottom: 0
+  &__header
+    text-align: center
+    font-weight: 400
+    margin: rem(60px) 0
+    &:before
+      display: inline-block
+      content: '🎁'
+  &__text
+    display: flex
+    justify-content: center
+    align-items: center
+  &__image
+    position: relative
+    &_imac
+      z-index: 10
+      position: relative
+    &_mba
+      position: absolute
+      transform: scale(.9)
+      z-index: 20
+      bottom: rem(-40px)
+      left: rem(-130px)
+      +md
+        left: rem(-30px)
+    &_ipad
+      position: relative
+      right: rem(-50px)
+    &_iphone
+      position: relative
+      left: rem(-150px)
+    &_iphonese
+      transform: scale(.9)      
+      position: absolute
+      bottom: rem(0px)
+      right: rem(100px)
+    &_iwatch
+      position: relative
+      left: rem(100px)
