@@ -11,43 +11,50 @@
           content: '—'
   &__item
     margin-bottom: rem(110px)
-    &:last-child
-        margin-bottom: 0
   &__header
     text-align: center
     font-weight: 400
     margin: rem(60px) 0
+    display: flex
+    justify-content: center
+    align-items: center
+    white-space: nowrap    
     &:before
-      display: inline-block
-      content: '🎁'
+      content: ''
+      display: flex
+      justify-content: center
+      align-items: center
+      min-width: 40px
+      min-height: 40px
+      background-image: url('../img/sprite.png')
+      background-position: rem(-160px) 0
+      background-repeat: no-repeat
+      background-size: cover
+      margin-right: rem(30px)
+    // &:before
+    //   display: inline-block
+    //   content: '🎁'
+    //   margin-right: rem(30px)      
   &__text
     display: flex
     justify-content: center
     align-items: center
+    white-space: nowrap
   &__image
     position: relative
-    &_imac
-      z-index: 10
-      position: relative
-    &_mba
-      position: absolute
-      transform: scale(.9)
-      z-index: 20
-      bottom: rem(-40px)
-      left: rem(-130px)
-      +md
-        left: rem(-30px)
     &_ipad
       position: relative
-      right: rem(-50px)
+      // right: rem(-50px)
     &_iphone
       position: relative
-      left: rem(-150px)
+      // left: rem(-150px)
     &_iphonese
+      max-height: rem(400px)
       transform: scale(.9)      
       position: absolute
-      bottom: rem(0px)
-      right: rem(100px)
+      // bottom: rem(0px)
+      // right: rem(100px)
     &_iwatch
+      max-height: rem(250px)
       position: relative
-      left: rem(100px)
+      // left: rem(100px)
