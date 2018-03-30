@@ -1,4 +1,6 @@
 #user ignore list
+/src
+/gulp
 
 # Numerous always-ignore extensions
 *.rar
