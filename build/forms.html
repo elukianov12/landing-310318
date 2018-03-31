@@ -16,7 +16,7 @@
             <div class="container form__container">
               <div class="row">
                 <div class="col">
-                  <h3 class="form__header">Расчет стоимости полной страховки</h3>
+                  <h3 class="form__header">Расчет стоимости комплексной страховки</h3>
                 </div>
               </div>
               <div class="row">
@@ -96,7 +96,11 @@
               <div class="row">
                 <div class="col">
                   <div class="company">
-                    <div class="company__image"><img src="img/unica.png" alt=""/></div>
+                    <div class="company__image">
+                      <label for="unica">
+                        <input id="unica" type="radio" name="company"/><img src="img/unica.png" alt=""/>
+                      </label>
+                    </div>
                     <div class="company__price">
                       <p>4899<span> CZK </span></p>
                     </div>
@@ -104,7 +108,11 @@
                 </div>
                 <div class="col">
                   <div class="company">
-                    <div class="company__image"><img src="img/slavia.png" alt=""/></div>
+                    <div class="company__image">
+                      <label for="slavia">
+                        <input id="slavia" type="radio" name="company"/><img src="img/slavia.png" alt=""/>
+                      </label>
+                    </div>
                     <div class="company__price">
                       <p>4899<span> CZK </span></p>
                     </div>
@@ -112,20 +120,16 @@
                 </div>
                 <div class="col">
                   <div class="company">
-                    <div class="company__image"><img src="img/vzp.png" alt=""/></div>
+                    <div class="company__image">
+                      <label for="vzp">
+                        <input id="vzp" type="radio" name="company"/><img src="img/vzp.png" alt=""/>
+                      </label>
+                    </div>
                     <div class="company__price">
                       <p>4899<span> CZK </span></p>
                     </div>
                   </div>
                 </div>
-                <!-- .col-->
-                <!--   .company-->
-                <!--     .company__image-->
-                <!--       img(src="img/maxima.png", alt="")-->
-                <!--     .company__price-->
-                <!--       p-->
-                <!--        | 4899-->
-                <!--        span  CZK -->
               </div>
               <div class="row">
                 <div class="col d-flex justify-content-center flex-column align-items-center">
@@ -139,40 +143,40 @@
       <div class="form__wrapper">
         <div class="section form form__first">
           <form action="#" method="post">
-            <div class="container prizes__container">
+            <div class="container form__container">
               <div class="row">
                 <div class="col">
                   <h3 class="form__header">Оформление страхового полиса</h3>
                 </div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col form__section">
                   <label class="form__header_description" for="initials"> * Имя и фамилия</label>
                   <input id="initials" type="text" name="name" required="required" placeholder="Ivan Ivanov"/><small>латинскими буквами как указано в заграничном паспоорте</small>
                 </div>
-                <div class="col">
+                <div class="col form__section">
                   <label class="form__header_description" for="dob">* Дата рождения</label>
                   <div class="form__date form__date_dob"></div>
                   <input id="dob" type="date" name="dob" required="required"/>
                 </div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col form__section">
                   <label class="form__header_description" for="citizenship"> * Гражданство</label>
                   <input id="citizenship" type="text" name="citizenship" required="required"/>
                 </div>
-                <div class="col">
+                <div class="col form__section">
                   <label class="form__header_description" for="insurance">* Дата начала страховки</label>
                   <div class="form__date form__date_"></div>
                   <input id="insurance" type="date" name="insurance" required="required"/>
                 </div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col form__section">
                   <label class="form__header_description" for="ipassport"> * Номер загранпаспорта</label>
                   <input id="ipassport" type="text" name="international passport" required="required"/>
                 </div>
-                <div class="col">
+                <div class="col form__section">
                   <label class="form__header_description" for="rodne"> Rodné číslo</label>
                   <input id="rodne" type="text" name="Rodné číslo"/>
                 </div>
@@ -181,17 +185,17 @@
                 <div class="col"><small>После нескольких лет проживания в стране, иностранцы получают rodné číslo и оно обязательно для официальных документов. Если у вас его нет - просто не заполняйте поле.</small></div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col form__section">
                   <label class="form__header_description" for="registration"> * Прописка в Чехии</label>
                   <input id="registration" required="required" type="text" name="international passport" placeholder="Praha, Na Slatince 3279/3"/>
                 </div>
               </div>
               <div class="row">
-                <div class="col">
+                <div class="col form__section">
                   <label class="form__header_description" for="email"> * E-Mail</label>
                   <input id="email" type="email" name="Email" required="required"/>
                 </div>
-                <div class="col">
+                <div class="col form__section">
                   <label class="form__header_description" for="phone">* Номер Телефона</label>
                   <input id="phone" type="tel" name="Phone"/>
                 </div>
