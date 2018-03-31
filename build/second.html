@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>iPhone Landing</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form__wrapper">
+        <div class="section form form__second">
+          <form action="#" method="post">
+            <div class="container form__container">
+              <div class="row">
+                <div class="col">
+                  <h3 class="form__header">Оформление страхового полиса<span class="text_bold"> Unica</span></h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col form__section">
+                  <p>* Имя и фамилия</p>
+                </div>
+                <div class="col form__section">
+                  <p>* Дата рождения</p>
+                </div>
+              </div>
+              <div class="row no-gutters form__row">
+                <div class="col-sm col-user">
+                  <label class="form__label form__label_text form__small" for="initials">
+                    <input id="initials" type="text" name="initials" placeholder="Ivan Ivanov" required="required"/>
+                  </label>
+                </div>
+                <div class="col-sm col-user">
+                  <label class="form__label form__label_text form__small" for="dob">
+                    <input id="dob" type="date" name="dob" placeholder="17.03.1991" required="required"/>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">   <small>Латинскими буквами как указано в загранпаспорте</small></div>
+              </div>
+              <div class="row">
+                <div class="col form__section">
+                  <p>* Гражданство</p>
+                </div>
+                <div class="col form__section">
+                  <p>* Дата начала страховки</p>
+                </div>
+              </div>
+              <div class="row no-gutters form__row">
+                <div class="col-sm col-user">
+                  <label class="form__label form__label_text" for="citizenship">
+                    <input id="citizenship" type="text" name="citizenship" placeholder="United Kingdom" required="required"/>
+                  </label>
+                </div>
+                <div class="col-sm col-user">
+                  <label class="form__label form__label_text" for="dob">
+                    <input id="dob" type="date" name="dob" placeholder="17.03.1991" required="required"/>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col form__section">
+                  <p>* Номер загранпаспорта</p>
+                </div>
+                <div class="col form__section">
+                  <p>Rodné číslo </p>
+                </div>
+              </div>
+              <div class="row no-gutters form__row">
+                <div class="col-sm col-user">
+                  <label class="form__label form__label_text form__small" for="passport">
+                    <input id="passport" type="text" name="passport" placeholder="United Kingdom" required="required"/>
+                  </label>
+                </div>
+                <div class="col-sm col-user">
+                  <label class="form__label form__label_text form__small" for="rodne">
+                    <input id="rodne" type="text" name="rodne" placeholder="17.03.1991"/>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col"><small>после нескольких лет проживания в стране, иностранцы получают rodné číslo и оно обязательно для официальных документов. Если у вас его нет - просто не заполняйте поле</small></div>
+              </div>
+              <div class="row">
+                <div class="col form__section">
+                  <p>* Прописка в Чехии</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm col-user">
+                  <label class="form__label form__label_text" for="registration">
+                    <input id="registration" type="text" name="registration" placeholder="Praha, Na Slatince 3279/3" required="required"/>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col form__section">
+                  <p>* E-mail</p>
+                </div>
+                <div class="col form__section">
+                  <p>* Номер телефона</p>
+                </div>
+              </div>
+              <div class="row no-gutters form__row">
+                <div class="col-sm col-user">
+                  <label class="form__label form__label_text" for="email">
+                    <input id="email" type="email" name="email" placeholder="ivanov@gmail.com" required="required"/>
+                  </label>
+                </div>
+                <div class="col-sm col-user">
+                  <label class="form__label form__label_text" for="tel">
+                    <input id="tel" type="tel" name="tel" placeholder="+420 777 777 777" required="required"/>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col d-flex justify-content-center flex-column align-items-center">
+                  <button class="button button__form button__submit" type="submit">Заказать</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col"><small>Используя данную форму, вы соглашаетесь с обработкой ваших персональных данных в соответствии с законодательтвом ЧР и тем, что предложенная по итогам обработки цена может измениться в результате изменения тарифов страховой компании</small></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/tether.min.js"></script>
+    <script src="scripts/bundle.js"></script>
+  </body>
+</html>
