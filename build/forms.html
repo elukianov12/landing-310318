@@ -25,18 +25,18 @@
                 </div>
               </div>
               <div class="row no-gutters form__row">
-                <div class="col">
+                <div class="col-sm col-user">
                   <label class="form__label form__label_radio" for="male">
+                    <input id="male" type="radio" name="sex"/>
                     <div class="form__radio form__radio_male"></div>
                     <p>Мужской</p>
-                    <input id="male" type="radio" name="sex"/>
                   </label>
                 </div>
-                <div class="col">
+                <div class="col-sm col-user">
                   <label class="form__label form__label_radio" for="female">
+                    <input id="female" type="radio" name="sex"/>
                     <div class="form__radio form__radio_female"></div>
                     <p>Женский</p>
-                    <input id="female" type="radio" name="sex"/>
                   </label>
                 </div>
               </div>
@@ -46,14 +46,19 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col">
-                  <label for="age"></label>
-                  <input id="age" type="text" name="age"/>
-                  <label for="student">Я являюсь студентом
-                    <div class="form__checkbox form__checkbox_student"></div>
+                <div class="col d-flex">
+                  <label class="form__label form__label_age" for="age">
+                    <input id="age" type="text" name="age" placeholder="18"/>
                   </label>
-                  <input id="student" type="checkbox" name="student"/><small>Укажите количество полных лет на момент начала действия страхового полиса</small>
+                  <label class="form__label form__label_student" for="student"> 
+                    <input id="student" type="checkbox" name="student"/>
+                    <div class="form__checkbox form__checkbox_student"><i class="fa fa-check"></i></div>
+                    <p>Я являюсь студентом</p>
+                  </label>
                 </div>
+              </div>
+              <div class="row">
+                <div class="col">   <small>Укажите количество полных лет на момент начала действия страхового полиса</small></div>
               </div>
               <div class="row">
                 <div class="col form__section">
@@ -61,25 +66,25 @@
                 </div>
               </div>
               <div class="row no-gutters form__row">
-                <div class="col">
+                <div class="col-sm col-user">
                   <label class="form__label form__label_radio" for="month6">
+                    <input id="month6" type="radio" name="month"/>
                     <div class="form__radio form__radio_month"></div>
                     <p>на 6 месяцев</p>
-                    <input id="month6" type="radio" name="month"/>
                   </label>
                 </div>
-                <div class="col">
+                <div class="col-sm col-user">
                   <label class="form__label form__label_radio" for="month12">
+                    <input id="month12" type="radio" name="month"/>
                     <div class="form__radio form__radio_month"></div>
                     <p>на 12 месяца</p>
-                    <input id="month12" type="radio" name="month"/>
                   </label>
                 </div>
-                <div class="col">
+                <div class="col-sm col-user">
                   <label class="form__label form__label_radio" for="month24">
+                    <input id="month24" type="radio" name="month"/>
                     <div class="form__radio form__radio_month"></div>
                     <p>на 24 месяца</p>
-                    <input id="month24" type="radio" name="month"/>
                   </label>
                 </div>
               </div>
@@ -91,26 +96,40 @@
               <div class="row">
                 <div class="col">
                   <div class="company">
-                    <div class="company__image"></div>
-                    <div class="company__price"></div>
+                    <div class="company__image"><img src="img/unica.png" alt=""/></div>
+                    <div class="company__price">
+                      <p>4899<span> CZK </span></p>
+                    </div>
                   </div>
                 </div>
                 <div class="col">
                   <div class="company">
-                    <div class="company__image"></div>
-                    <div class="company__price"></div>
+                    <div class="company__image"><img src="img/slavia.png" alt=""/></div>
+                    <div class="company__price">
+                      <p>4899<span> CZK </span></p>
+                    </div>
                   </div>
                 </div>
                 <div class="col">
                   <div class="company">
-                    <div class="company__image"></div>
-                    <div class="company__price"></div>
+                    <div class="company__image"><img src="img/vzp.png" alt=""/></div>
+                    <div class="company__price">
+                      <p>4899<span> CZK </span></p>
+                    </div>
                   </div>
                 </div>
+                <!-- .col-->
+                <!--   .company-->
+                <!--     .company__image-->
+                <!--       img(src="img/maxima.png", alt="")-->
+                <!--     .company__price-->
+                <!--       p-->
+                <!--        | 4899-->
+                <!--        span  CZK -->
               </div>
               <div class="row">
-                <div class="col">
-                  <button class="button button__form button__submit" type="submit">заказать</button><a href="http://#">Подробнее</a>
+                <div class="col d-flex justify-content-center flex-column align-items-center">
+                  <button class="button button__form button__submit" type="submit">Далее</button>
                 </div>
               </div>
             </div>
