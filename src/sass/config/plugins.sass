@@ -15,3 +15,13 @@
 .country-select .country-list 
   left: -465%;
   max-width: 272px;
+
+.country-select
+  &.inside 
+  & .flag-dropdown
+    &:hover
+      & .selected-flag
+        border-bottom-right-radius: rem(20px)
+        border-top-right-radius: rem(20px)
+        box-shadow: 0 0 0 rem(1px) rgba(0,0,0,.05)
+        // transform: scale(1.05)
