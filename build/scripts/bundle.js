@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#citizenship").countrySelect({defaultCountry:"cz",preferredCountries:["cz","ru","gb","de"],responsiveDropdown:!0})});
+$(document).ready(function(){$("#citizenship").countrySelect({defaultCountry:"kz",preferredCountries:["cz","ru","gb","de","kz"],responsiveDropdown:!0})});

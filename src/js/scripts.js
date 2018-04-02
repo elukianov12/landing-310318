@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("#citizenship").countrySelect({
-    defaultCountry: "cz",
-    preferredCountries: ['cz', 'ru', 'gb', 'de'],
+    defaultCountry: "kz",
+    preferredCountries: ['cz', 'ru', 'gb', 'de', 'kz'],
     responsiveDropdown: true
   });
 });
