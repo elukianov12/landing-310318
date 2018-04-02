@@ -1,0 +1,101 @@
+block form-first
+  .form__wrapper
+    .section.form.form__first
+      form(action="#", method="post")
+        .container.form__container
+          .row
+            .col
+              h3.form__header.
+                Расчет стоимости комплексной страховки
+          .row
+            .col.form__section
+              p.
+                Пол
+          .row.no-gutters.form__row
+            .col-sm.col-user
+              label(for="male").form__label.form__label_radio
+                input#male(type="radio", name="sex")
+                .form__radio.form__radio_male
+                p Мужской
+                .form__icon.form__icon_male
+            .col-sm.col-user
+              label(for="female").form__label.form__label_radio
+                input#female(type="radio", name="sex") 
+                .form__radio.form__radio_female
+                p Женский
+                .form__icon.form__icon_female
+          .row
+            .col.form__section
+              p.
+                Возраст
+          .row
+            .col.d-flex
+              label(for="age").form__label.form__label_age
+                input#age(type="text", name="age" placeholder="18")
+              label(for="student").form__label.form__label_student 
+                input#student(type="checkbox", name="student")
+                .form__checkbox.form__checkbox_student
+                  i.fa.fa-check
+                p Я являюсь студентом
+          .row
+            .col    
+              small.form__small_age.
+                Укажите количество полных лет на момент начала действия страхового полиса
+          .row
+            .col.form__section
+              p.
+                Срок страхования
+          .row.no-gutters.form__row
+            .col-sm.col-user
+              label(for="month6").form__label.form__label_radio
+                input#month6(type="radio", name="month") 
+                .form__radio.form__radio_month
+                p на 6 месяцев
+            .col-sm.col-user
+              label(for="month12").form__label.form__label_radio
+                input#month12(type="radio", name="month") 
+                .form__radio.form__radio_month
+                p на 12 месяца
+            .col-sm.col-user
+              label(for="month24").form__label.form__label_radio
+                input#month24(type="radio", name="month") 
+                .form__radio.form__radio_month
+                p на 24 месяца
+          .row
+            .col.form__section
+              p.
+                Страховая компания
+          .row
+            .col
+              .company__wrapper
+                .company
+                  .company__image
+                    label(for="unica")
+                      input#unica(type="radio", name="company")
+                      img(src="img/unica.png", alt="")
+                  .company__price
+                    p
+                      | 4899
+                      span  CZK 
+                .company
+                  .company__image
+                    label(for="slavia")
+                      input#slavia(type="radio", name="company")
+                      img.img-fluid(src="img/slavia.png", alt="")
+                  .company__price
+                    p
+                      | 4899
+                      span  CZK 
+                .company
+                  .company__image
+                    label(for="vzp")
+                      input#vzp(type="radio", name="company")
+                      img.img-fluid(src="img/vzp.png", alt="")
+                  .company__price
+                    p
+                      | 4899
+                      span  CZK 
+          .row
+            .col.d-flex.justify-content-center.flex-column.align-items-center
+              button(type="submit").button.button__form.button__submit.
+                Далее

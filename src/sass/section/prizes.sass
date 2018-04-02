@@ -1,0 +1,82 @@
+.prizes
+  background-image: url('../img/waves.png')
+  background-repeat: no-repeat
+  background-size: contain
+  background-position-y: rem(700px)
+  &__text
+    font-size: rem(27px)
+    +md
+      font-size: rem(18px)
+    +sm
+      font-size: rem(16px)
+    & li
+      display: flex
+      &:before
+        margin-right: rem(10px)
+        content: '—'
+  &__item
+    height: 80vh
+    +md
+      height: initial
+    margin-bottom: rem(110px)
+    &:last-child
+      margin-bottom: 0
+  &__header
+    text-align: center
+    font-weight: 400
+    margin: rem(60px) 0
+    display: flex
+    justify-content: center
+    align-items: center
+    white-space: nowrap    
+    &:before
+      content: ''
+      display: flex
+      justify-content: center
+      align-items: center
+      min-width: 40px
+      min-height: 40px
+      background-image: url('../img/sprite.png')
+      background-position: rem(-160px) 0
+      background-repeat: no-repeat
+      background-size: cover
+      margin-right: rem(30px)
+    // &:before
+    //   display: inline-block
+    //   content: '🎁'
+    //   margin-right: rem(30px)      
+  &__text
+    display: flex
+    justify-content: center
+    align-items: center
+    white-space: nowrap
+    +sm
+      font-size: rem(14px)
+      &:nth-child(even)
+        transform: translateX(rem(-10px))
+      &:nth-child(odd)
+        transform: translateX(rem(10px))
+    &-watch
+      +sm
+        transform: translateX(rem(-23px))!important
+  &__image
+    position: relative
+    &_ipad
+      position: relative
+      // right: rem(-50px)
+    &_iphone
+      position: relative
+      // left: rem(-150px)
+    &_iphonese
+      max-height: rem(400px)
+      transform: scale(.9)      
+      position: absolute
+      // bottom: rem(0px)
+      // right: rem(100px)
+    &_iwatch
+      position: relative
+      max-height: rem(400px)
+      left: rem(100px)
+      +md
+        max-height: rem(250px)
+        left: initial

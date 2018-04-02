@@ -1,0 +1,193 @@
+.form
+  min-height: 100vh
+  max-width: rem(560px)
+  margin: 0 auto
+  color: $form-text
+  background-color: $gray
+  &__icon
+    width: rem(25px)
+    height: rem(25px)
+    background-size: cover
+    position: absolute
+    right: rem(20px)
+    transition: .2s
+    opacity: .3
+    &_male
+      background-image: url('../img/male.svg')
+    &_female
+      background-image: url('../img/female.svg')
+    &_calendar
+      font-size: rem(25px)
+      right: rem(-40px)
+      color: rgba($black, .3)
+      opacity: 1
+      &:hover
+        color: $green
+  &__wrapper
+    background-color: $gray
+  &__container
+    padding: 0
+    +sm
+      padding: rem(15px)
+  & small
+    display: block
+    color: rgba($form-text, 0.4)
+  &__header
+    margin-top: rem(30px)
+    margin-bottom: rem(15px)
+    color: $green
+    font-weight: 300
+    font-size: rem(25px)
+    &_description
+      display: block
+  &__section
+    font-size: rem(19px)
+    font-weight: 800
+    margin-bottom: rem(13px)
+  &__label
+    cursor: pointer
+    display: flex
+    align-items: center
+    position: relative
+    background-color: $white
+    padding: rem(16px) rem(20px)
+    border-radius: rem(10px)
+    box-shadow: 0 rem(2px) rem(10px) rgba(#bdc9d1, 0.3)
+    // margin-bottom: rem(25px)
+    &_radio
+      & p
+        margin-left: rem(13px)
+        font-size: rem(15px)
+        font-weight: 800
+      & input
+        position: absolute
+        opacity: 0
+        &:checked
+          & ~ .form__radio
+            border: rem(6px) solid $green
+          & ~ .form__icon
+            &_male
+              opacity: 1
+              background-image: url('../img/male_active.svg')
+            &_female
+              opacity: 1
+              background-image: url('../img/female_active.svg')
+
+    &_age
+      display: inline-flex
+      max-height: rem(43px)
+      max-width: rem(65px)
+      padding: 0
+      border-radius: rem(40px)
+      margin-right: rem(15px)
+      margin-bottom: 0
+      &:focus-within
+        box-shadow: 0 0 rem(4px) rem(1px) rgba($red, 0.4)
+      & input
+        width: 100%
+        color: $form-text
+        border: none
+        text-align: center
+        font-size: rem(21px)
+        font-weight: 800
+        height: rem(46px)
+        padding: rem(10px)
+        border-radius: rem(40px)
+        &:focus
+          outline: none
+        &::placeholder
+          opacity: .6
+    &_date
+      width: 80%
+    &_text
+      border-radius: rem(30px)
+      padding: rem(9px) rem(20px)
+      & input
+        font-size: rem(18px)
+        width: 100%
+        border: none
+        outline: none
+        &[type="date"]
+          height: rem(22px)
+    &_student
+      position: relative
+      display: inline-flex
+      box-shadow: none
+      background-color: transparent
+      padding: 0
+      &-health
+        margin-bottom: 0
+        margin-right: rem(30px)
+        &:last-child
+          margin-right: 0
+        &:focus-within
+          box-shadow: none!important
+      & p
+        font-weight: 800
+      & input
+        position: absolute
+        opacity: 0
+        &:checked
+          & ~ .form__checkbox
+            & .fa-check
+              transform: scale(1)
+  &__checkbox
+    @extend .form__label
+    padding: 0
+    border-radius: rem(15px)
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    height: rem(46px)
+    width: rem(46px)
+    margin-right: rem(15px)
+    & .fa-check
+      color: $green
+      transition: .2s
+      font-size: rem(25px)
+      transform: scale(0)
+    
+  &__row
+    .col-user
+      margin-right: rem(20px)
+      margin-bottom: rem(22px)
+      &:last-child
+        margin-right: 0
+      +sm
+        margin-right: 0
+  &__radio
+    transition: border .2s
+    border-radius: 50%
+    display: inline-block
+    content: ''
+    width: rem(19px)
+    height: rem(19px)
+    border: rem(1px) solid $gray
+    background-color: $white
+  &__small
+    &_age
+      margin-bottom: rem(5px)
+    &_question
+      margin-bottom: rem(5px)
+  &__second
+    & label
+      &:focus-within
+        box-shadow: 0 0 rem(4px) rem(1px) rgba($red, 0.4)
+    & .form
+      &__section
+        margin-bottom: rem(15px)
+      &__label
+        margin-bottom: rem(20px)
+      &__small
+        margin-bottom: rem(10px)
+        &_question
+          margin-bottom: rem(10px)
+      &__checkbox
+        &_health
+          margin-bottom: 0
+    & small
+      margin-bottom: rem(20px)
+  &__row
+    .col-user
+      margin-bottom: 0
+

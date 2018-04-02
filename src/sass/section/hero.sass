@@ -1,0 +1,119 @@
+.hero
+  height: 100vh
+  padding: rem(50px) rem(85px)
+  display: flex
+  flex-flow: column
+  +md
+    padding: rem(50px) rem(10px)
+  &__button
+    font-size: rem(25px)
+    display: flex
+    position: relative
+    &:before
+      position: absolute
+      left: rem(-230px)
+      transform: rotate(-30deg)
+      +lg
+        left: rem(-150px)
+      +md
+        left: rem(-80px)
+        transform: rotate(-20deg)
+      +sm
+        transform: scale(.7) rotate(-20deg)
+        left: rem(-35px)
+      content: ''
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 70px; height: 70px
+      background-image: url('../img/sprite.png')
+      background-position: -350px 0
+      background-repeat: no-repeat
+      background-size: cover
+    &:after
+      position: absolute
+      top: rem(-50px)
+      right: rem(-335px)
+      transform: rotate(20deg)
+      content: ''
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 90px; height: 90px
+      background-image: url('../img/sprite.png')
+      background-position: -270px 0
+      background-repeat: no-repeat
+      background-size: cover
+      +lg
+        right: rem(-150px)
+      +md
+        right: rem(-100px)
+      +sm
+        transform: scale(.7) rotate(20deg)
+        right: rem(-40px)
+  &__row
+    flex: 1
+  &__container
+    background-image: url('../img/hero.png')
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+  &__header
+    position: relative
+    text-align: center
+    text-transform: uppercase
+    font-size: rem(65px)
+    font-weight: 800
+    color: $white
+    text-shadow: 2px 2px 35px rgba(251, 224, 94, 1), 1px 1px 3px rgba(235, 168, 63, 1);
+    margin-bottom: rem(30px)
+    +md
+      font-size: rem(40px)
+    +sm
+      font-size: rem(30px)
+    &:before
+      position: absolute
+      left: rem(-80px)
+      top: rem(-50px)
+      +xs
+        left: rem(-30px)
+        top: rem(-150px)
+      +sm
+        left: rem(-40px)
+        top: rem(-100px)
+      content: ''
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 80px
+      height: 80px
+      background-image: url('../img/sprite.png')
+      background-position: rem(-160px) 0
+      background-repeat: no-repeat
+      background-size: cover
+    &:after
+      position: absolute
+      top: rem(50px)
+      right: rem(-70px)
+      +xs
+        right: rem(-30px)
+      +sm
+        top: rem(20px)
+        right: rem(-40px)
+      content: ''
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 50px 
+      height: 50px
+      background-image: url('../img/sprite.png')
+      background-position: rem(-100px) 0
+      background-repeat: no-repeat
+      background-size: cover
+  &__description
+    text-align: center
+    color: $white;
+    max-width: rem(510px)
+    margin-bottom: rem(30px)
+    +md
+      max-width: initial

@@ -1,0 +1,134 @@
+block form-second
+  .form__wrapper
+    .section.form.form__second
+      form(action="#", method="post")
+        .container.form__container
+          .row
+            .col
+              h3.form__header
+                | Оформление страхового полиса
+                span.text_bold  Unica
+          .row.no-gutters.form__row
+            .col-sm.col-user
+              .form__section
+                p.
+                  * Имя и фамилия
+              label(for="initials").form__label.form__label_text.form__small
+                input#initials(type="text", name="initials" placeholder="Ivan Ivanov" required)
+            .col-sm.col-user
+              .form__section
+                p.
+                  * Дата рождения
+              label(for="dob").form__label.form__label_text.form__small.form__label_date
+                .fa.fa-calendar.form__icon.form__icon_calendar
+                input#dob(type="text", name="dob" placeholder="17.03.1991" required).datepicker-here
+          .row
+            .col    
+              small.
+                Латинскими буквами как указано в загранпаспорте
+          .row.no-gutters.form__row
+              .col-sm.col-user
+                .form__section
+                  p.
+                    * Гражданство
+                label(for="citizenship").form__label.form__label_text.visuallyhidden
+                input#citizenship(type="text" name="citizenship" required)
+              .col-sm.col-user
+                .form__section
+                  p.
+                    * Дата начала страховки
+                label(for="insurance").form__label.form__label_text.form__label_date
+                  .fa.fa-calendar.form__icon.form__icon_calendar
+                  input#insurance(type="text", name="dob" placeholder="17.03.1991" required).datepicker-here
+          .row.no-gutters.form__row
+              .col-sm.col-user
+                .form__section
+                  p.
+                    * Номер загранпаспорта
+                label(for="passport").form__label.form__label_text.form__small
+                  input#passport(type="text", name="passport" placeholder="United Kingdom" required)
+              .col-sm.col-user
+                .form__section
+                  p.
+                    Rodné číslo 
+                label(for="rodne").form__label.form__label_text.form__small
+                  input#rodne(type="text", name="rodne" placeholder="17.03.1991")
+          .row
+            .col
+              small.
+                после нескольких лет проживания в стране, иностранцы получают rodné číslo и оно обязательно для официальных документов. Если у вас его нет - просто не заполняйте поле
+            
+          .row
+            .col-sm.col-user
+                .form__section
+                  p.
+                    * Прописка в Чехии
+                label(for="registration").form__label.form__label_text
+                  input#registration(type="text", name="registration" placeholder="Praha, Na Slatince 3279/3" required)
+          .row.no-gutters.form__row
+              .col-sm.col-user
+                .form__section
+                  p.
+                    * E-mail
+                label(for="email").form__label.form__label_text
+                  input#email(type="email", name="email" placeholder="ivanov@gmail.com" required)
+              .col-sm.col-user
+                .form__section
+                  p.
+                    * Номер телефона
+                label(for="tel").form__label.form__label_text
+                  input#tel(type="tel", name="tel" placeholder="+420 777 777 777" required)
+          .row.no-gutters.form__row
+              .col-sm.col-user
+                .form__section
+                  p.
+                    Вы сейчас здоровы?
+                label(for="questionyes").form__label.form__label_student.form__label_student-health
+                  input#questionyes(type="radio", name="question")
+                  .form__checkbox.form__checkbox_health
+                    i.fa.fa-check
+                  p Да
+                label(for="questionno").form__label.form__label_student.form__label_student-health
+                  input#questionno(type="radio", name="question")
+                  .form__checkbox.form__checkbox_health
+                    i.fa.fa-check
+                  p Нет
+          .row
+            .col
+              small.form__small_question.
+                Вы обследуетесь и/или наблюдаетесь в одном из медицинских учреждений в котором у вас нашли серьезную болезнь (например, туберкулез, СПИД, высокое кровяное давление или другие заболевания системы кровообращения и сердечно-сосудистых заболеваний внутренних органов, анемии, гепатита, болезни легких, сахарный диабет, эпилепсия, паралич, заболевания глаз, рак, психические болезни или другой врожденный дефект, склероз, заболевания опорно-двигательного аппарата). У вас есть постоянная инвалидость, или вы зависимы от алкоголя, наркотиков или злоупотребляете психоактивными веществами, были или имеете травмы или болезни, требующие операции, госпитализации, или занимаетесь профессиональным спортом или рисковой деятельностью (например, Альпинизм, прыжки с парашютом и т.д.), или у вас профессия связанная с рисками для здоровья?
+          .row.no-gutters.form__row
+              .col-sm.col-user
+                label(for="healthyes").form__label.form__label_student.form__label_student-health
+                  input#healthyes(type="radio", name="health")
+                  .form__checkbox.form__checkbox_health
+                    i.fa.fa-check
+                  p Да
+                label(for="healthno").form__label.form__label_student.form__label_student-health
+                  input#healthno(type="radio", name="health")
+                  .form__checkbox.form__checkbox_health
+                    i.fa.fa-check
+                  p Нет
+          .row
+            .col.form__section
+              p.
+                * Доставка
+          .row.no-gutters.form__row
+            .col-sm.col-user
+              label(for="deliveryoffice").form__label.form__label_radio
+                input#deliveryoffice(type="radio", name="delivery")
+                .form__radio
+                p Забрать в офисе
+            .col-sm.col-user
+              label(for="deliveryHome").form__label.form__label_radio
+                input#deliveryHome(type="radio", name="delivery") 
+                .form__radio
+                p Доставить на дом
+          .row
+            .col.d-flex.justify-content-center.flex-column.align-items-center
+              button(type="submit").button.button__form.button__form_second.button__submit.
+                Заказать
+          .row
+            .col
+              small.
+                Используя данную форму, вы соглашаетесь с обработкой ваших персональных данных в соответствии с законодательтвом ЧР и тем, что предложенная по итогам обработки цена может измениться в результате изменения тарифов страховой компании

@@ -1,0 +1,17 @@
+// Пользовательские стили различных плагинов
+
+.country-select
+  @extend .form__label
+  @extend .form__label_text
+
+.country-select.inside input, .country-select.inside input[type=text]
+  padding-left: 0
+  padding-right: rem(27px)
+
+.country-select.inside .flag-dropdown
+  right: 0
+  left: initial
+
+.country-select .country-list 
+  left: -465%;
+  max-width: 272px;
