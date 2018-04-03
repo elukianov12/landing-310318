@@ -38,7 +38,7 @@ $.gulp.task('build',
     $.gulp.parallel(
         "pug", 
         "sass", 
-        "svg", 
+        "icons", 
         "img",
         $.gulp.series("ttf2woff2","fonts"),
         "scripts",
