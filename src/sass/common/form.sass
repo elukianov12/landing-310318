@@ -28,7 +28,7 @@
   &__container
     padding: 0
     +sm
-      padding: rem(15px)
+      padding: rem(30px)
   & small
     display: block
     color: rgba($form-text, 0.4)
@@ -53,8 +53,10 @@
     padding: rem(16px) rem(20px)
     border-radius: rem(10px)
     box-shadow: 0 rem(2px) rem(10px) rgba(#bdc9d1, 0.3)
-    // margin-bottom: rem(25px)
+    font-weight: 800
+    
     &_radio
+      margin-bottom: rem(22px);
       & p
         margin-left: rem(13px)
         font-size: rem(15px)
@@ -99,9 +101,13 @@
           opacity: .6
     &_date
       width: 80%
+      +sm
+        width: 90%
     &_text
       border-radius: rem(30px)
       padding: rem(9px) rem(20px)
+      +sm
+        padding: rem(13px) rem(20px)
       & input
         font-size: rem(18px)
         width: 100%
@@ -116,7 +122,6 @@
       background-color: transparent
       padding: 0
       &-health
-        margin-bottom: 0
         margin-right: rem(30px)
         &:last-child
           margin-right: 0
@@ -166,7 +171,7 @@
     background-color: $white
   &__small
     &_age
-      margin-bottom: rem(5px)
+      margin-bottom: rem(18px)
     &_question
       margin-bottom: rem(5px)
   &__second
@@ -178,10 +183,12 @@
         margin-bottom: rem(15px)
       &__label
         margin-bottom: rem(20px)
+        &_student
+          margin-bottom: rem(30px)
       &__small
         margin-bottom: rem(10px)
         &_question
-          margin-bottom: rem(10px)
+          margin-bottom: rem(15px)
       &__checkbox
         &_health
           margin-bottom: 0

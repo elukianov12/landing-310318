@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#citizenship").countrySelect({defaultCountry:"kz",preferredCountries:["cz","ru","gb","de","kz"],responsiveDropdown:!0})});
+$(document).ready(function(){$("#citizenship").countrySelect({defaultCountry:"kz",preferredCountries:["cz","ru","gb","de","kz"],responsiveDropdown:!0});new SocialButtons({services:["vkontakte","facebook","twitter","odnoklassniki"],id:"social-buttons",counter:!0,components:["icon","text","count"],theme:"color"})});

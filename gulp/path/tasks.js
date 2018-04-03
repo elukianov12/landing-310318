@@ -23,4 +23,7 @@ module.exports = [
     './gulp/tasks/plugins/style/countrySelectImg.js',
     './gulp/tasks/plugins/js/airDatepicker.js',
     './gulp/tasks/plugins/style/airDatepicker.js',
+    './gulp/tasks/plugins/js/socialButtons.js',
+    './gulp/tasks/plugins/style/socialButtons.js',
+    './gulp/tasks/plugins/style/socialButtonsImg.js',
 ];
