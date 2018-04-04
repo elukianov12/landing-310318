@@ -1,10 +1,24 @@
 .logo
   &__text
-    text-transform: 
+    text-transform: uppercase
     color: $white
     font-size: rem(36px)
+    & a
+      cursor: pointer
+      display: block
+      transition: all .3s
+      position: relative
+      text-shadow: 0 0 rem(2px) rgba($dark, .3)
+      top: 0
+      right: 0
+      left: 0
+      bottom: 0
+      &:hover
+        transform: translate(rem(0px), rem(-2px))
+        text-shadow: 0 rem(2px) rem(10px) rgba($dark, .3)
+        color: white
     +xxl
-      font-size: rem(48px)
+      font-size: rem(52px)
     font-weight: 900
     padding: rem(4.5px) rem(17.5px)
     background-color: rgba($white, .3)

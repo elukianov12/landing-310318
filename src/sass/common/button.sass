@@ -2,7 +2,13 @@
   &:focus
     outline: none
     box-shadow: 0px 0px 20px rgba($gold, 0.9)
+  & a
+    color: $button-color
+    &:hover
+      color: $button-color
   font-size: rem(25px)
+  +xxl
+    font-size: rem(35px)
   +md
     font-size: rem(20px)
   +sm
@@ -10,7 +16,6 @@
   cursor: pointer
   font-weight: 800
   text-transform: uppercase
-  color: $button-color
   padding: rem(20px) rem(30px)
   border-radius: rem(5px)
   border: none
