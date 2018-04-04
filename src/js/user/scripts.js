@@ -6,13 +6,18 @@ $(document).ready(function () {
     responsiveDropdown: true
   });
 //подключение социальных кнопок
-  var options = {
+  var options = { //настраиваем кнопки
     services: ['vkontakte', 'facebook', 'twitter', 'odnoklassniki'],
     id: 'social-buttons',
     counter: true,
     components: ['icon','text','count'],
     theme: 'color'
-}
-  new SocialButtons(options);
+  }
+
+  if ($("div").is("#social-buttons")) { //проверяем наличие элемента на странице
+    new SocialButtons(options); //вставляем кнопки
+  }  
+
+  $('a').smoothScroll() //включаем плавный скролл всем ссылкам
 
 });

@@ -68,33 +68,34 @@ block form-first
           .row
             .col
               .company__wrapper
-                .company
-                  .company__image
-                    label(for="unica")
-                      input#unica(type="radio", name="company")
-                      img(src="img/unica.png", alt="")
-                  .company__price
-                    p
-                      | 4899
-                      span  CZK 
-                .company
-                  .company__image
-                    label(for="slavia")
-                      input#slavia(type="radio", name="company")
-                      img.img-fluid(src="img/slavia.png", alt="")
-                  .company__price
-                    p
-                      | 4899
-                      span  CZK 
-                .company
-                  .company__image
-                    label(for="vzp")
-                      input#vzp(type="radio", name="company")
-                      img.img-fluid(src="img/vzp.png", alt="")
-                  .company__price
-                    p
-                      | 4899
-                      span  CZK 
+                -
+                  var company = [
+                    {
+                      name:'unica',
+                      price: 4899
+                    },
+                    {
+                      name:'slavia',
+                      price: 3990
+                    },
+                    {
+                      name:'vzp',
+                      price: 5120
+                    },
+                    {
+                      name:'maxima',
+                      price: 2450
+                    },
+                  ]
+                each item in company
+                  .company
+                    .company__image
+                      label(for=`${item.name}`)
+                        input(id =`${item.name}` type="radio", name="company")
+                        img(src=`img/${item.name}.png`, alt="")
+                    .company__price
+                      p=  item.price
+                        span  CZK 
           .row
             .col.d-flex.justify-content-center.flex-column.align-items-center
               button(type="submit").button.button__form.button__submit.

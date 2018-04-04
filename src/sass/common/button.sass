@@ -2,6 +2,11 @@
   &:focus
     outline: none
     box-shadow: 0px 0px 20px rgba($gold, 0.9)
+  font-size: rem(25px)
+  +md
+    font-size: rem(20px)
+  +sm
+    font-size: rem(16px)
   cursor: pointer
   font-weight: 800
   text-transform: uppercase
@@ -12,7 +17,9 @@
   box-shadow: 0px 2px 11px 0px #003b2f
   background-color: $gradient-top
   background: linear-gradient(to bottom, $gradient-top 0%, $gradient-middle 50%, $gradient-bottom 100%)
+
   &__form
+    font-size: rem(20px)
     background: none
     background-color: $green
     color: $white

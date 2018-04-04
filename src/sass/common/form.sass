@@ -10,12 +10,13 @@
     background-size: cover
     position: absolute
     right: rem(20px)
-    transition: .2s
     opacity: .3
     &_male
-      background-image: url('../img/male.svg')
+      background-image: url('../icons/icons.svg')
+      background-position: 0 rem(-50px)
     &_female
-      background-image: url('../img/female.svg')
+      background-image: url('../icons/icons.svg')
+      background-position: 0 0
     &_calendar
       font-size: rem(25px)
       right: rem(-40px)
@@ -70,11 +71,10 @@
           & ~ .form__icon
             &_male
               opacity: 1
-              background-image: url('../img/male_active.svg')
+              background-position: 0 rem(-75px)
             &_female
               opacity: 1
-              background-image: url('../img/female_active.svg')
-
+              background-position: 0 rem(-25px)
     &_age
       display: inline-flex
       max-height: rem(43px)

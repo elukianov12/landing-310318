@@ -34,6 +34,7 @@ $.gulp.task('build',
                       'countrySelect:js',
                       'airDatepicker:js',
                       'socialButtons:js',
+                      'smoothScroll:js',
                     ),
     $.gulp.parallel(
         "pug", 
@@ -42,7 +43,7 @@ $.gulp.task('build',
         "img",
         $.gulp.series("ttf2woff2","fonts"),
         "scripts",
-        "jsPlugins")
+        "scripts:plugins")
 ));
 
 $.gulp.task("default",

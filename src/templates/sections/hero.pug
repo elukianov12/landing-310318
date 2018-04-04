@@ -6,18 +6,21 @@ block hero
           .col.d-flex.align-items-center.header__col
             .logo
               h3.logo__text KDOVI
-              //- img.img-fluid.logo__img(src="", alt="")
           .col.header__col
             ul.header__list.d-flex.justify-content-end
-              li.header__item
-                a.header__link(href="#") Правила
-              li.header__item
-                a.header__link(href="#") Призы
+              -
+                var headerLinks = [
+                  {name: 'Правила', link: '#terms'},
+                  {name: 'Призы', link: '#prizes'},
+                ]
+              each item in headerLinks
+                li.header__item
+                  a.header__link(href=`/${item.link}`)= item.name
       .row.hero__row
         .col-md.d-flex.flex-column.justify-content-end.align-items-center
           h1.hero__header мега розыгрыш
           p.hero__description
-            | оформи медицинскую страховку до 7 сентября и учавствуй в  
+            | оформи медицинскую страховку до 7 сентября и участвуй в  
             b
               span.text_bold крупнейшем розыгрыше
             |  призов в Чехии

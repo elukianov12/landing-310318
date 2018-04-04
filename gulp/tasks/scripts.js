@@ -2,7 +2,7 @@
 module.exports = function() {
   $.gulp.task("scripts", function() {
     return $.gulp
-      .src(['./src/js/*.js','!./src/js/plugins/**/*.js'])
+      .src(['./src/js/user/**/*.js',])
       .pipe($.p.plumber())
       .pipe($.p.babel())
       .pipe($.p.concat("bundle.js"))

@@ -4,7 +4,8 @@ module.exports = function() {
   $.gulp.task('watch', function() {
     $.gulp.watch('./src/**/*.pug', $.gulp.series('pug'));
     $.gulp.watch('./src/**/*.sass', $.gulp.series('sass'));
-    $.gulp.watch('./src/js/*.js', $.gulp.series('scripts'));
+    $.gulp.watch('./src/js/user/**/*.js', $.gulp.series('scripts'));
+    $.gulp.watch('./src/js/plugins/**/*.js', $.gulp.series('scripts:plugins'));
     $.gulp.watch('./src/assets/img/**/*.*', $.gulp.series('img'));
     $.gulp.watch('./src/assets/icons/**/*.*', $.gulp.series('icons'));
     $.gulp.watch(['./src/fonts/**/*.woff', './src/fonts/**/*.woff2'], $.gulp.series('fonts'));
