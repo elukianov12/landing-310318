@@ -10,6 +10,7 @@
     bottom: 0
     left: 0
     right: 0
+    padding: rem(20px) rem(30px)
     &:hover
       color: $button-color
   font-size: rem(25px)
@@ -22,7 +23,6 @@
   cursor: pointer
   font-weight: 800
   text-transform: uppercase
-  padding: rem(20px) rem(30px)
   border-radius: rem(5px)
   border: none
   box-shadow: 0px 2px 11px 0px #003b2f
@@ -33,11 +33,24 @@
     font-size: rem(20px)
     background: none
     background-color: $green
-    color: $white
-    padding: rem(20px) rem(60px)
     border-radius: rem(32px)
     box-shadow: 0px 5px 19px 0px rgba(#3ca288, .4)
     margin-bottom: rem(20px)
+    & a
+      color: $white
+      padding: rem(20px) rem(60px)
+      display: block
+      position: relative
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      &:hover
+        color: $white
     &_second
       margin: rem(40px) rem(0px)
+      color: $white
+      & a 
+        &:hover
+          color: $white
       
