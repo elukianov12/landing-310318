@@ -12,11 +12,23 @@
     right: rem(20px)
     opacity: .3
     &_male
-      background-image: url('../icons/icons.svg')
-      background-position: 0 rem(-50px)
+      &:before
+        width: 0
+        height: 0
+        visibility:hidden
+        display: none
+        position: absolute
+        content: url('../icons/users/male_active.svg')
+      background-image: url('../icons/users/male.svg')
     &_female
-      background-image: url('../icons/icons.svg')
-      background-position: 0 0
+      &:before
+        width: 0
+        height: 0
+        visibility:hidden
+        display: none
+        position: absolute
+        content: url('../icons/users/female_active.svg')
+      background-image: url('../icons/users/female.svg')
     &_calendar
       font-size: rem(25px)
       right: rem(-40px)
@@ -71,10 +83,11 @@
           & ~ .form__icon
             &_male
               opacity: 1
-              background-position: 0 rem(-75px)
+              background-image: url('../icons/users/male_active.svg')
             &_female
               opacity: 1
               background-position: 0 rem(-25px)
+              background-image: url('../icons/users/female_active.svg')
     &_age
       display: inline-flex
       max-height: rem(43px)
