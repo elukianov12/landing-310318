@@ -11,19 +11,19 @@ block hero
             ul.header__list.d-flex.justify-content-end
               -
                 var headerLinks = [
-                  {name: 'Правила', link: '#terms'},
                   {name: 'Призы', link: '#prizes'},
+                  {name: 'Правила', link: '#terms'},
                 ]
               each item in headerLinks
                 li.header__item
                   a.header__link(href=`/${item.link}`)= item.name
       .row.hero__row
-        .col-md.d-flex.flex-column.justify-content-end.align-items-center
+        .col-md.d-flex.flex-column.justify-content-end.align-items-center.hero__col
           h1.hero__header мега розыгрыш
           p.hero__description
-            | оформи медицинскую страховку до 7 сентября и участвуй в  
+            | Оформи медицинскую страховку до 30 сентября и участвуй в  
             b
               span.text_bold крупнейшем розыгрыше
-            |  призов в Чехии
-          button.button.hero__button 
-            a(href="first.html") Оформить страховку
+            |  призов в Чехии.
+          a(href="first.html").button.hero__button.
+            Оформить страховку

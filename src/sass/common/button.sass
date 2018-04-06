@@ -2,17 +2,16 @@
   &:focus
     outline: none
     box-shadow: 0px 0px 20px rgba($gold, 0.9)
-  & a
+  color: $button-color
+  display: block
+  position: relative
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  padding: rem(20px) rem(30px)
+  &:hover
     color: $button-color
-    display: block
-    position: relative
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    padding: rem(20px) rem(30px)
-    &:hover
-      color: $button-color
   font-size: rem(25px)
   +xxl
     font-size: rem(35px)
@@ -20,6 +19,14 @@
     font-size: rem(20px)
   +sm
     font-size: rem(16px)
+    padding: rem(15px) rem(20px)
+  +xs
+    padding: rem(10px) rem(20px)
+  +xxs
+    white-space: nowrap
+    font-size: 14px
+    padding: rem(10px) rem(14px)
+    
   cursor: pointer
   font-weight: 800
   text-transform: uppercase
@@ -28,7 +35,6 @@
   box-shadow: 0px 2px 11px 0px #003b2f
   background-color: $gradient-top
   background: linear-gradient(to bottom, $gradient-top 0%, $gradient-middle 50%, $gradient-bottom 100%)
-
   &__form
     font-size: rem(20px)
     background: none
@@ -36,17 +42,16 @@
     border-radius: rem(32px)
     box-shadow: 0px 5px 19px 0px rgba(#3ca288, .4)
     margin-bottom: rem(20px)
-    & a
+    color: $white
+    padding: rem(20px) rem(60px)
+    display: block
+    position: relative
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    &:hover
       color: $white
-      padding: rem(20px) rem(60px)
-      display: block
-      position: relative
-      top: 0
-      bottom: 0
-      left: 0
-      right: 0
-      &:hover
-        color: $white
     &_second
       margin: rem(40px) rem(0px)
       color: $white

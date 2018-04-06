@@ -1,10 +1,16 @@
 .hero
   height: 100vh
+  +md
   padding: rem(50px) rem(85px)
   display: flex
   flex-flow: column
+  &__col
+    +md
+      margin-bottom: rem(50px)
   +md
     padding: rem(50px) rem(10px)
+  +xs
+    padding: rem(50px) rem(0px)
   &__button
     display: flex
     position: relative
@@ -20,7 +26,7 @@
         left: rem(-80px)
         transform: rotate(-20deg)
       +sm
-        transform: scale(.7) rotate(-20deg)
+        transform: scale(.5) rotate(-20deg)
         left: rem(-35px)
       content: ''
       display: flex
@@ -52,8 +58,8 @@
       +md
         right: rem(-100px)
       +sm
-        transform: scale(.7) rotate(20deg)
-        right: rem(-40px)
+        transform: scale(.6) rotate(20deg)
+        right: rem(-50px)
   &__row
     flex: 1
   &__container
@@ -66,16 +72,18 @@
     text-align: center
     text-transform: uppercase
     font-size: rem(65px)
-    +xxl
-      font-size: rem(85px)
     font-weight: 800
     color: $white
     text-shadow: 2px 2px 35px rgba(251, 224, 94, 1), 1px 1px 3px rgba(235, 168, 63, 1);
     margin-bottom: rem(30px)
+    +xxl
+      font-size: rem(85px)
     +md
       font-size: rem(40px)
     +sm
       font-size: rem(30px)
+    +xs
+      font-size: rem(24px)
     &:before
       position: absolute
       left: rem(-80px)
@@ -88,12 +96,18 @@
       +sm
         left: rem(-40px)
         top: rem(-100px)
+      +xs
+        width: rem(40px)
+        height: rem(40px)
+        background-position: rem(-80px) 0
+        left: rem(-20px) 
+        top: rem(-40px)
       content: ''
       display: flex
       justify-content: center
       align-items: center
-      width: 80px
-      height: 80px
+      width: rem(80px)
+      height: rem(80px)
       background-image: url('../img/sprite.png')
       background-position: rem(-160px) 0
       background-repeat: no-repeat
@@ -104,11 +118,15 @@
       right: rem(-70px)
       +xxl
         transform: scale(1.2)
-      +xs
-        right: rem(-30px)
+      +md
+        top: rem(10px)
       +sm
         top: rem(20px)
         right: rem(-40px)
+      +xs
+        right: rem(-30px)
+        top: rem(10px)
+        transform: scale(.7)
       content: ''
       display: flex
       justify-content: center
@@ -126,6 +144,7 @@
     margin-bottom: rem(30px)
     +md
       max-width: initial
+      margin-bottom: rem(40px)
     +xxl
       font-size: rem(28px)
       max-width: rem(710px)

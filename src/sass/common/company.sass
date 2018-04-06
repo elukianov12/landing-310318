@@ -3,16 +3,19 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-between
-    +sm
+    +bp-468
+      max-width: rem(300px)
+      margin: 0 auto
+    +xs
+      max-width: rem(240px) 
+    +xxs
+      max-width: rem(200px) 
       // flex-flow: column
       // justify-content: center
   display: flex
   align-items: center
   flex-flow: column
   margin-bottom: rem(50px)
-  margin-right: rem(10px)
-  &:last-child
-    margin-right: rem(0px)
   &__image
     margin-bottom: rem(20px)
     width: rem(132px)
@@ -21,7 +24,7 @@
       width: rem(102px)
       height: rem(102px)
       margin-bottom: rem(15px)
-    +xs
+    +bp-340
       width: rem(72px)
       height: rem(72px)
       margin-bottom: rem(10px)
