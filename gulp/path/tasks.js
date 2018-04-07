@@ -16,6 +16,8 @@ module.exports = [
     './gulp/tasks/plugins/style/normalize.js',
     './gulp/tasks/plugins/style/bootstrap4.js',
     './gulp/tasks/plugins/js/bootstrap4js.js',
+    './gulp/tasks/plugins/js/modal.js',
+    './gulp/tasks/plugins/style/modal.js',
     './gulp/tasks/plugins/js/jQuery.js',
     './gulp/tasks/plugins/js/tether.js',
     './gulp/tasks/plugins/js/countrySelect.js',

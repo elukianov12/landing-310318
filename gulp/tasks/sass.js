@@ -9,7 +9,10 @@ module.exports = function() {
       .pipe($.p.sassGlob())
       .pipe(
         $.p.sass({
-          outputStyle: "compressed"
+          outputStyle: "compressed",
+          includePaths: [
+            'node_modules/jquery-modal',
+          ]
         })
       )
       .pipe(

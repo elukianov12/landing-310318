@@ -1,0 +1,73 @@
+#secondModal
+  max-width: rem(500px)
+#firstModal
+  max-width: rem(800px)
+.mymodal
+  display: flex
+  flex-flow: column
+  align-items: center
+  justify-content: center
+  position: relative
+  &__header
+    color: $green
+    font-weight: 300
+    font-size: rem(25px)
+    +bp-468
+      font-size: rem(20px)
+  &__second
+    display: flex
+    flex-flow: column
+    align-items: flex-start
+    color: $form-text
+    padding: rem(50px) 0
+  &__thanks
+    margin: rem(35px) 0
+    +bp-468
+      font-size: rem(14px)
+    +xs
+      font-size: rem(12px)
+  &__data
+    font-weight: 300
+    margin-bottom: rem(5px)
+    +bp-468
+      font-size: rem(14px)
+    +xs
+      font-size: rem(12px)
+  &__wrapper
+    display: flex
+    align-items: center
+    padding: rem(100px) rem(150px)
+    +md
+      padding: rem(50px) rem(50px)
+    +xs
+      padding: rem(20px) rem(20px)
+  & small
+    text-align: center
+    color: rgba($form-text, .6)
+    +sm
+      margin-top: rem(20px)
+  &__image
+    margin-bottom: rem(50px)
+    transform: translateX(rem(15px))
+    +md
+      max-width: rem(120px)
+      margin-bottom: rem(30px)
+    +sm
+      max-width: rem(100px)
+  &__button
+    +md
+      font-size: rem(14px)
+    +sm
+      font-size: rem(11px)
+    &_first
+      padding-left: rem(60px) 
+      padding-right: rem(60px)
+      +md
+        padding-left: rem(30px) 
+        padding-right: rem(30px)
+    &_second
+      padding-left: rem(36px) 
+      padding-right: rem(36px) 
+      +md
+        padding-left: rem(18px) 
+        padding-right: rem(18px) 

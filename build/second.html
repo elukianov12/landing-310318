@@ -165,8 +165,8 @@
                   </label>
                 </div>
               </div>
-              <div class="row no-gutters form__row form__row-adress">
-                <div class="col-7 col-user">
+              <div class="row no-gutters form__row form__row-adress form__row-mini">
+                <div class="col-7 col-user col-user-adress col-user-hidden">
                   <div class="form__section">
                     <p>* Адрес доставки</p>
                   </div>
@@ -174,7 +174,7 @@
                     <input id="email" type="text" name="adress" placeholder="Národní 1012/1, Praha" required="required"/>
                   </label>
                 </div>
-                <div class="col-4 col-user col-user-adress">
+                <div class="col-4 col-user col-user-psc col-user-hidden">
                   <div class="form__section">
                     <p>* PSČ</p>
                   </div>
@@ -185,7 +185,7 @@
               </div>
               <div class="row">
                 <div class="col d-flex justify-content-center flex-column align-items-center">
-                  <button class="button button__form button__form_second button__submit" type="submit"><a>перейти к оплате</a></button>
+                  <button class="button button__form button__form_second button__submit" type=""><a>перейти к оплате</a></button>
                 </div>
               </div>
               <div class="row">
@@ -193,6 +193,29 @@
               </div>
             </div>
           </form>
+        </div>
+        <div class="mymodal__wrapper" id="firstModal">
+          <div class="mymodal mymodal__first">
+            <div class="mymodal__image"><img class="img-fluid" src="img/bill.png" alt=""/></div>
+            <button class="button button__form mymodal__button mymodal__button_first" type="submit"><a>Оплатить картой</a></button>
+            <button class="button button__form mymodal__button mymodal__button_second" type="submit"><a>Оплатить переводом</a></button><small class="mymodal__hint">Также вы можете оплатить страховку <span class="text_bold">наличными</span> или <span class="text_bold">картой </span>в нашем офисе по адресу:<br/>Praha 1, Václavské nám. вестибюль станции метро Můstek трассы А </small>
+          </div>
+        </div>
+        <div class="mymodal__wrapperr" id="secondModal">
+          <div class="mymodal mymodal__second">
+            <div class="mymodal__header">Ваш номер заказа: <span class="text_bold">34578239</span></div>
+            <div class="mymodal__thanks text_bold">Спасибо, информация o платеже и подтверждение о заказе отправлены на ваш email.</div>
+            <p class="mymodal__data">Номер счета: <span class="text_bold">63635628/5500</span></p>
+            <p class="mymodal__data">Вариабельный символ: <span class="text_bold">0604123241</span></p>
+            <p class="mymodal__data">IBAN: <span class="text_bold">CZ4255000000000063635628</span></p>
+            <p class="mymodal__data">Банк: <span class="text_bold">Raiffeisen Bank a.s.</span></p>
+            <p class="mymodal__data">BIC: <span class="text_bold">RZBCCZPP</span></p>
+            <p class="mymodal__data">Получатель: <span class="text_bold">Centrum Pojištění Cizinců - Foreigners' Insurance Center s.r.o.</span></p>
+          </div>
+          <div class="mymodal__controls controls">
+            <div class="controls__back controls__item"><a href="#" id="modalBack"><i class="fa fa-arrow-left"></i></a></div>
+            <div class="controls__close controls__item"><a href="#close" rel="modal:close"><i class="fa fa-close"></i></a></div>
+          </div>
         </div>
       </div>
     </div>

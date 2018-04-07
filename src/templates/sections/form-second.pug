@@ -124,14 +124,14 @@ block form-second
                 input#deliveryHome(type="radio", name="delivery") 
                 .form__radio
                 p Доставить на дом
-          .row.no-gutters.form__row.form__row-adress
-            .col-7.col-user
+          .row.no-gutters.form__row.form__row-adress.form__row-mini
+            .col-7.col-user.col-user-adress.col-user-hidden
               .form__section
                 p.
                   * Адрес доставки
               label(for="adress").form__label.form__label_text
                 input#email(type="text", name="adress" placeholder="Národní 1012/1, Praha" required)
-            .col-4.col-user.col-user-adress
+            .col-4.col-user.col-user-psc.col-user-hidden
               .form__section
                 p.
                   * PSČ
@@ -139,9 +139,69 @@ block form-second
                 input#tel(type="tel", name="tel" placeholder="11000" required)
           .row
             .col.d-flex.justify-content-center.flex-column.align-items-center
-              button(type="submit").button.button__form.button__form_second.button__submit
+              button(type="").button.button__form.button__form_second.button__submit
                 a() перейти к оплате
           .row
             .col
               small.
                 Используя данную форму, вы соглашаетесь с обработкой ваших персональных данных в соответствии с законодательтвом ЧР и тем, что предложенная по итогам обработки цена может измениться в результате изменения тарифов страховой компании
+    .mymodal__wrapper#firstModal
+      .mymodal.mymodal__first
+        .mymodal__image
+          img.img-fluid(src="img/bill.png", alt="")
+        button(type="submit").button.button__form.mymodal__button.mymodal__button_first
+          a() Оплатить картой
+        button(type="submit").button.button__form.mymodal__button.mymodal__button_second
+          a() Оплатить переводом
+        small.mymodal__hint
+          | Также вы можете оплатить страховку 
+          span.text_bold наличными
+          |  или 
+          span.text_bold картой 
+          | в нашем офисе по адресу:
+          br
+          | Praha 1, Václavské nám. вестибюль станции метро Můstek трассы А 
+    .mymodal__wrapperr#secondModal
+      .mymodal.mymodal__second
+        .mymodal__header
+          | Ваш номер заказа: 
+          span.text_bold 34578239
+        .mymodal__thanks.text_bold
+          | Спасибо, информация o платеже и подтверждение о заказе отправлены на ваш email.
+        -
+          var data = [
+            { 
+              key: 'Номер счета: ',
+              val: '63635628/5500'
+            },
+            { 
+              key: 'Вариабельный символ: ',
+              val: '0604123241'
+            },
+            { 
+              key: 'IBAN: ',
+              val: 'CZ4255000000000063635628'
+            },
+            { 
+              key: 'Банк: ',
+              val: 'Raiffeisen Bank a.s.'
+            },
+            { 
+              key: 'BIC: ',
+              val: 'RZBCCZPP'
+            },
+            { 
+              key: 'Получатель: ',
+              val: "Centrum Pojištění Cizinců - Foreigners' Insurance Center s.r.o."
+            },
+          ]
+        each item in data
+          p.mymodal__data= item.key 
+            span.text_bold= item.val
+      .mymodal__controls.controls
+        .controls__back.controls__item
+          a(href="#")#modalBack
+            i.fa.fa-arrow-left
+        .controls__close.controls__item
+          a(href="#close" rel="modal:close")
+            i.fa.fa-close
