@@ -5,40 +5,57 @@ block prizes
         .col
           h2.prizes__header Список призов
       ul.prizes__list
-        li.prizes__item
-          .row.h-100
-            .col-4.prizes__text
-              ul
-                li 
-                  p iMac 21,5"
-                li 
-                  p MacBook Air
-            .col-8.prizes__image.d-flex.align-items-center
-                img.img-fluid.prizes__image_imac(src="img/imac.png", alt="")
-        li.prizes__item
-          .row.h-100
-            .col-8.prizes__image.d-flex.align-items-center
-                img.img-fluid.prizes__image_ipad(src="img/ipad.png", alt="")
-            .col-4.prizes__text
-              ul
-                li iPad Pro 12,9"
-                li iPad
-                li iPad Mini
-        li.prizes__item
-          .row.h-100
-            .col-5.prizes__text
-              ul
-                li iPhone X
-                li iPhone 8 Plus
-                li iPhone 8
-                li iPhone SE
-            .col-7.prizes__image.d-flex.align-items-center
-                img.img-fluid.prizes__image_iphone(src="img/iphone.png", alt="")
-        li.prizes__item
-          .row.h-100
-            .col-8.col-sm-6.prizes__image.d-flex.align-items-center
-              img.img-fluid.prizes__image_iwatch(src="img/iwatch.png", alt="")
-            .col-4.col-sm-6.prizes__text.prizes__text-watch
-              ul
-                li Apple Watch Nike +
-
+        - 
+          var prizes = [
+            {
+              id: 'imac',
+              list: [
+                'iMac 21,5"',
+                'MacBook Air',
+                  ],
+              image: 'imac.png',
+            },
+            {
+              id: 'ipad',
+              list: [
+                'iPad Pro 12,9"',
+                'iPad',
+                'iPad Mini',
+                  ],
+              image: 'ipad.png',
+            },
+            {
+              id: 'iphone',
+              list: [
+                'iPhone X',
+                'iPhone 8 Plus',
+                'iPhone 8',
+                'iPhone SE',
+                  ],
+              image: 'iphone.png',
+            },
+            {
+              id: 'iwatch',
+              list: [
+                'Apple Watch Nike +',
+                  ],
+              image: 'iwatch.png',
+            },
+          ]
+        each item, i in prizes
+          li.prizes__item
+            .row.h-100
+              .col-md-4.prizes__text(
+                class=i % 2 == 0 ? 'order-md-first' : 'order-md-last'
+              )
+                ul
+                  each li in item.list
+                    li
+                      p=li
+              .col-md-8.prizes__image(
+              )
+                  img.img-fluid(
+                    class=`prizes__image-${item.id}`,
+                    src=`img/${item.image}`, 
+                    alt=""
+                    )
