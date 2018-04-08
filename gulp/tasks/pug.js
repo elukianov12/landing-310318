@@ -6,7 +6,7 @@ module.exports = function() {
           .pipe($.p.plumber())
           .pipe(
             $.p.pug({
-              pretty: true
+              // pretty: true
             })
           )
           .pipe($.gulp.dest($.config.build));

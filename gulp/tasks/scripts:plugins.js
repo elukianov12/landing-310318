@@ -2,16 +2,16 @@
 module.exports = function() {
   $.gulp.task("scripts:plugins", function() {
     return $.gulp
-      .src(['./src/js/plugins/**/*.js',])
+      .src([
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/tether/dist/js/tether.min.js',
+        'node_modules/bootstrap/dist/js/bootstrap.min.js',
+        'node_modules/jquery-smooth-scroll/jquery.smooth-scroll.min.js',
+      ])
       .pipe($.p.plumber())
-      // .pipe($.p.babel())
-      .pipe($.p.order([
-        'src/js/plugins/jquery.min.js',
-        'src/js/plugins/bootstrap.min.js',
-        'src/js/plugins/tether.min.js',
-      ], { base: './' }))
+      .pipe($.p.babel())
       .pipe($.p.concat("plugins.js"))
-      // .pipe($.p.uglify())
+      .pipe($.p.uglify())
       .pipe($.gulp.dest($.config.build + "/scripts"));
   });
 };

@@ -1,32 +1,15 @@
 'use strict';
 
 module.exports = [
-    './gulp/tasks/serve.js',
-    './gulp/tasks/watch.js',
-    './gulp/tasks/clean.js',
-    './gulp/tasks/icons.js',
-    './gulp/tasks/pug.js',
-    './gulp/tasks/sass.js',
-    './gulp/tasks/img.js',
-    './gulp/tasks/scripts.js',
-    './gulp/tasks/scripts:plugins.js',
-    './gulp/tasks/fonts.js',
-    './gulp/tasks/fontsConvert.js',
-    './gulp/tasks/plugins/fontAwesome.js',
-    './gulp/tasks/plugins/style/normalize.js',
-    './gulp/tasks/plugins/style/bootstrap4.js',
-    './gulp/tasks/plugins/js/bootstrap4js.js',
-    './gulp/tasks/plugins/js/modal.js',
-    './gulp/tasks/plugins/style/modal.js',
-    './gulp/tasks/plugins/js/jQuery.js',
-    './gulp/tasks/plugins/js/tether.js',
-    './gulp/tasks/plugins/js/countrySelect.js',
-    './gulp/tasks/plugins/style/countrySelect.js',
-    './gulp/tasks/plugins/style/countrySelectImg.js',
-    './gulp/tasks/plugins/js/airDatepicker.js',
-    './gulp/tasks/plugins/style/airDatepicker.js',
-    './gulp/tasks/plugins/js/smoothScroll.js',
-    './gulp/tasks/plugins/js/socialButtons.js',
-    './gulp/tasks/plugins/style/socialButtons.js',
-    './gulp/tasks/plugins/style/socialButtonsImg.js',
+    './gulp/tasks/serve.js', //запуск сервера
+    './gulp/tasks/watch.js', //слежение за файлами
+    './gulp/tasks/clean.js', //очищение папки build
+    './gulp/tasks/icons.js', //перенос файлов из папки assets/icons
+    './gulp/tasks/pug.js', //обработчик pug
+    './gulp/tasks/sass.js',//обработчик sass
+    './gulp/tasks/img.js',//перенос и минификация изображений
+    './gulp/tasks/scripts.js',//конкатенация, углификация и прогон через бабель
+    './gulp/tasks/scripts:plugins.js', //подключение плагинов
+    './gulp/tasks/fonts.js', //обработка шрифтов
+    './gulp/tasks/fontsConvert.js', //конвертация ттф в вофф2
 ];

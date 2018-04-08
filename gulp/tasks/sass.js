@@ -5,13 +5,13 @@ module.exports = function() {
     return $.gulp
       .src('./src/sass/main.sass')
       .pipe($.p.plumber())
-      // .pipe($.p.sourcemaps.init())
+      .pipe($.p.sourcemaps.init())
       .pipe($.p.sassGlob())
       .pipe(
         $.p.sass({
           outputStyle: "compressed",
           includePaths: [
-            'node_modules/jquery-modal',
+            'node_modules/bootstrap/scss',
           ]
         })
       )
@@ -22,7 +22,7 @@ module.exports = function() {
         })
       )
       .pipe($.p.csso())
-      // .pipe($.p.sourcemaps.write())
+      .pipe($.p.sourcemaps.write())
       .pipe($.gulp.dest($.config.build + "/styles"));
   });
 };

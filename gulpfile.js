@@ -19,33 +19,15 @@ $.path.task.forEach(function(taskPath) {
 $.gulp.task('build', 
   $.gulp.series(
     "clean",
-    $.gulp.parallel ( 'fa:fontCopy',
-                      'normalize', 
-                      'bootstrapStyleCopy',
-                      'countrySelect:style',
-                      'countrySelect:img',
-                      'airDatepicker:style',
-                      'socialButtons:style',
-                      'socialButtons:img',
-                      'modal:styles',
-                    ),
-    $.gulp.parallel ( 'bootstrapJsCopy',
-                      'jqueryCopy',
-                      'tetherJs',
-                      'countrySelect:js',
-                      'airDatepicker:js',
-                      'socialButtons:js',
-                      'smoothScroll:js',
-                      'modal:js',
-                    ),
     $.gulp.parallel(
         "pug", 
         "sass", 
         "icons", 
         "img",
-        $.gulp.series("ttf2woff2","fonts"),
         "scripts",
-        "scripts:plugins")
+        "scripts:plugins",
+        $.gulp.series("ttf2woff2","fonts"),
+      )
 ));
 
 $.gulp.task("default",
