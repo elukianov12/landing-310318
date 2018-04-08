@@ -13,6 +13,9 @@ module.exports = function() {
           includePaths: [
             'node_modules/bootstrap/scss',
             'node_modules/air-datepicker/dist/css',
+            'node_modules/country-select-js/build/css',
+            'node_modules/jquery-modal',
+            'node_modules/social-buttons/src/css'
           ]
         })
       )
