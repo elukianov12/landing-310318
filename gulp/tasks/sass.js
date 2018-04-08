@@ -12,6 +12,7 @@ module.exports = function() {
           outputStyle: "compressed",
           includePaths: [
             'node_modules/bootstrap/scss',
+            'node_modules/air-datepicker/dist/css',
           ]
         })
       )
